@@ -1,4 +1,4 @@
-package it.polito.tdp.ruzzle;
+ package it.polito.tdp.ruzzle;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -92,6 +92,7 @@ public class FXMLController {
     @FXML
     void handleProva(ActionEvent event) {
     	
+    	System.out.println("Prova");
     	//refresh interfaccia grafica
     	for(Button b : letters.values()) {
     		b.setDefaultButton(false);
@@ -110,7 +111,7 @@ public class FXMLController {
     	}
     	
     	List<Pos> percorso = model.trovaParola(parola);
-    	
+    	System.out.println(percorso);
     	if(percorso != null) {
     		for(Pos p : percorso) {
     			letters.get(p).setDefaultButton(true);
